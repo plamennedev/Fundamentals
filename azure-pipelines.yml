@@ -5,9 +5,9 @@ stages:
 - stage: build
   displayName: 'Build and test the website'
   jobs:
-  - job: run_build
+  - job: windows-latest
     pool:
-      vmImage: windows-latest
+      vmImage: zz-zzvarna-vm
     steps:
     - script: echo Build
       displayName: 'First step in building the website skeleton'
@@ -51,7 +51,7 @@ stages:
   jobs:
   - job: create_infrastructure
     pool:
-      vmImage: windows-latest
+      vmImage: zz-zzvarna-vm
     steps:
     - script: echo Build Test Infrastructure
       displayName: 'First step in building the test infrastructure'
@@ -62,7 +62,7 @@ stages:
   jobs:
   - job: deploy_artefacts_to_test
     pool:
-      vmImage: windows-latest
+      vmImage: zz-zzvarna-vm
     steps:
     - script: echo Deploy Website to Test
       displayName: 'First step in deploying the website to test'
