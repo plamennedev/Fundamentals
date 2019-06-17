@@ -51,7 +51,7 @@ stages:
   jobs:
   - job: create_infrastructure
     pool:
-      vmImage: zz-zzvarna-vm
+      vmImage: $(zz-zzvarna-vm)
     steps:
     - script: echo Build Test Infrastructure
       displayName: 'First step in building the test infrastructure'
@@ -62,7 +62,7 @@ stages:
   jobs:
   - job: deploy_artefacts_to_test
     pool:
-      vmImage: zz-zzvarna-vm
+      vmImage: $(zz-zzvarna-vm)
     steps:
     - script: echo Deploy Website to Test
       displayName: 'First step in deploying the website to test'
